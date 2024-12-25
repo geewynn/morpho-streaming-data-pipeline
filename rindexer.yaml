@@ -1,0 +1,63 @@
+name: morphoIndexer
+project_type: no-code
+description: Morpho contracts data indexer
+networks:
+- name: ethereum
+  chain_id: 1
+  rpc: "${ETH_RPC_URL}" 
+storage:
+  postgres:
+    enabled: true
+
+contracts:
+- name: Morpho
+  details:
+  - network: ethereum
+    address: 0xbbbbbbbbbb9cc5e90e3b3af64bdaf62c37eeffcb
+    start_block: '18883124'
+    end_block: '21105392'
+  abi: ./abis/Morpho.abi.json
+- name: PublicAllocator
+  details:
+  - network: ethereum
+    address: 0xfd32fa2ca22c76dd6e550706ad913fc6ce91c75d
+    start_block: '19375099'
+    end_block: '21105392'
+  abi: ./abis/PublicAllocator.abi.json
+- name: MetaMorpho
+  details:
+  - network: ethereum
+    address: 0x186514400e52270cef3d80e1c6f8d10a75d47344
+    start_block: '18971966'
+    end_block: '21105392'
+  abi: ./abis/MetaMorpho.abi.json
+- name: MetaMorphoFlagshipEth
+  details:
+  - network: ethereum
+    address: 0x38989bba00bdf8181f4082995b3deae96163ac5d
+    start_block: '18927491'
+    end_block: '21105392'
+  abi: ./abis/MetaMorphoFlagshipEth.abi.json
+- name: MetaMorphoFactory
+  details:
+  - network: ethereum
+    address: 0xa9c3d3a366466fa809d1ae982fb2c46e5fc41101
+    start_block: '18925584'
+    end_block: '21105392'
+  abi: ./abis/MetaMorphoFactory.abi.json
+- name: llamaRiskCrvUsd
+  details:
+  - network: ethereum
+    address: 0x67315dd969b8cd3a3520c245837bf71f54579c75
+    start_block: '19639652'
+    end_block: '21105392'
+  abi: ./abis/llamaRiskCrvUsd.abi.json
+- name: steakhouseth
+  details:
+  - network: ethereum
+    address: 0xbeef050ecd6a16c4e7bffbb52ebba7846c4b8cd4
+    start_block: '19380443'
+    end_block: '21105392'
+  abi: ./abis/steakhouseth.abi.json
+global:
+  etherscan_api_key: ${ETHERSCAN_API_KEY} 
